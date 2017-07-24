@@ -1,0 +1,23 @@
+page-about {
+img {
+  margin-left:10px;
+}
+p{
+  font-size: 1.2em;
+  direction: rtl;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0px 25px;
+  &#main {
+    margin-top: 25px;
+    margin-bottom:20px;
+  }
+  &.signiture{
+
+  }
+
+}
+  #btnMail{
+    margin-top: 10px;
+  }
+}

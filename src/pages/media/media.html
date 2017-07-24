@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div id="voiceWrapper" *ngIf="!isVideo">
+    <ion-item>
+        <ion-row>
+            <ion-col col-12>
+                <input id="myRange" #im type="range" min="0" [max]="duration" [(ngModel)]="currentLocation"
+                       (change)="goto(im.value)">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>
+                <p text-left id="start">{{ currentLocation | mediatime}}</p>
+            </ion-col>
+            <ion-col col-8>
+
+            </ion-col>
+            <ion-col col-2>
+                <p id="end" text-right>{{ duration | mediatime}}</p>
+            </ion-col>
+        </ion-row>
+
+
+    </ion-item>
+    <ion-row>
+        <ion-col text-center>
+            <button ion-button align-items-center="" color="light" round (click)="play()">
+                <ion-icon name="play"></ion-icon>
+            </button>
+            <button ion-button color="light" round (click)="pause()">
+                <ion-icon name="pause"></ion-icon>
+            </button>
+            <button ion-button color="light" round (click)="stop()">
+                <ion-icon name="square"></ion-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+</div>
+
+<div id="videoWrapper" *ngIf="isVideo">
+    <video width="100%" autoplay="autoplay" fullscreen="true" controls style="margin-top: 50px; margin-bottom: 20px;">
+        <source [src]="videoSource" type="video/mp4"></video>
+</div>
+
+</ion-content>

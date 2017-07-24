@@ -1,0 +1,28 @@
+<!--<ion-header>-->
+    <!--<ion-navbar>-->
+        <!--<ion-title align-items-center>לטוס ללא פחד</ion-title>-->
+    <!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<ion-content class="vertical-align-content pane" padding
+             style="background:  url('assets/img/airplanewindow.jpg') no-repeat center center fixed; -webkit-background-size: cover;
+             -moz-background-size: cover;
+             background-size: cover;">
+    <ion-grid>
+        <ion-row id="buttons">
+            <ion-col col-12>
+                <ion-list>
+                    <ion-card *ngFor="let media of mediaGrups | async; let i = index">
+                        <div id="card-list">
+                            <ion-item (click)="gotoGroup(media.title,i)">
+                                <h2>{{media.title}}</h2>
+                            </ion-item>
+                        </div>
+                    </ion-card>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

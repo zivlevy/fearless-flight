@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AuthPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>קוד איתחול ליישומון</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <img src="assets/img/logoWide.png" alt="">
+    <div id="instructions">
+        <p>על מנת לאתחל את היישומון יש להשתמש בקוד איתחול.</p>
+        <p>אנא הכנס/י את שמך המלא לשדה מטה ולחץ/י על כפתור שליחת בקשת קוד איתחול על מנת לשלוח מייל עם המזהה של המכשיר.</p>
+        <ion-item>
+            <ion-input [(ngModel)]="fullname" type="text" placeholder="הכנס שם מלא"></ion-input>
+        </ion-item>
+        <button ion-button full (click)="send()">שלח בקשת קוד איתחול</button>
+        <p> לאחר קבלת מייל חוזר עם קוד איתחול יש להעתיקו במדוייק לשדה מטה וללחוץ על כפתור איתחול יישומון.</p>
+        <ion-item>
+            <ion-input [(ngModel)]="license" type="text" placeholder="הכנס קוד איתחול"></ion-input>
+        </ion-item>
+
+        <button ion-button full (click)="init()">איתחול יישומון</button>
+    </div>
+</ion-content>

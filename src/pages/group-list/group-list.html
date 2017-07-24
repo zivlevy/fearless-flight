@@ -1,0 +1,37 @@
+<!--
+  Generated template for the GroupListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar id="myNavbar">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="vertical-align-content pane" padding
+             style="background:  url('assets/img/airplanewindow.jpg') no-repeat center center fixed; -webkit-background-size: cover;
+             -moz-background-size: cover;
+             background-size: cover;">
+  <ion-grid>
+    <ion-row id="buttons">
+      <ion-col col-12>
+        <ion-list>
+          <ion-card *ngFor="let media of mediaGrups ; let i = index">
+            <div id="card-list">
+              <ion-item (click)="gotoMedia(media.title,i)">
+                <h2>{{media.title}}</h2>
+              </ion-item>
+            </div>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
